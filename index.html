@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire d'Armes de JDR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestionnaire d'Armes de JDR</h1>
+
+        <div class="form-container">
+            <h2>Ajouter une nouvelle arme</h2>
+            <form id="weapon-form">
+                <div class="form-group">
+                    <label for="name">Nom de l'arme:</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image-url">URL de l'image:</label>
+                    <input type="url" id="image-url" placeholder="https://exemple.com/image.jpg">
+                    <span>ou</span>
+                    <input type="file" id="image-file" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="durability">Durabilité (1-100):</label>
+                    <input type="number" id="durability" min="1" max="100" value="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="rarity">Rareté:</label>
+                    <select id="rarity">
+                        <option value="commun">Commun</option>
+                        <option value="peu-commun">Peu commun</option>
+                        <option value="rare">Rare</option>
+                        <option value="épique">Épique</option>
+                        <option value="légendaire">Légendaire</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="damage">Dégâts:</label>
+                    <input type="number" id="damage" min="1" value="10">
+                </div>
+
+                <div class="form-group">
+                    <label for="range">Distance (en mètres):</label>
+                    <input type="number" id="range" min="0" value="1">
+                </div>
+
+                <button type="submit" class="btn-add">Ajouter l'arme</button>
+            </form>
+        </div>
+
+        <div class="weapons-container">
+            <h2>Mes Armes</h2>
+            <div id="weapons-list" class="weapons-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
